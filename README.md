@@ -6,9 +6,9 @@
 
 One original line for make.fun's [The Vacuum's Alibi: One Line, 200 Characters](https://make.fun/bounty/u-gentle-badger-68-the-vacuum-s-alibi-one-line-200-2db2cbb7): a robot vacuum explains why it missed a spot.
 
-> I did not miss that spot. My lidar mapped it, my schedule approved it, and my battery voted to let the dust live there rent-free.
+> I left that crumb on purpose. My dustbin filed a complaint, my wheels went on strike, and the crumb negotiated a permanent lease.
 
-129 characters. Deadpan, a little smug about its lidar, schedule and battery — and the punch lands at the very end.
+129 characters. Deadpan, a little smug about its own dustbin and wheels — and the punch lands at the very end.
 
 ## Run it
 

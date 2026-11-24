@@ -10,14 +10,15 @@ Pure Python 3.13 standard library only.
 import hashlib
 import os
 
-# Why this line fits the judge's brief: deadpan robot voice throughout
-# ("I did not miss that spot"), a little smug about its sensors, its
-# schedule and its battery (lidar mapped it, schedule approved it, battery
-# voted), a surprise turn nobody expects (the dust gets to live there
-# rent-free), and the punch sits at the very end of the single line.
+# Why this line fits the judge's brief: a vacuum's alibi with three
+# escalating excuses — its dustbin filed a complaint, its wheels went on
+# strike, and the crumb itself negotiated a permanent lease. Deadpan robot
+# voice throughout ("I left that crumb on purpose"), a little smug about
+# its own parts, a surprise turn nobody expects (the crumb wins the
+# negotiation), and the punch sits at the very end of the single line.
 LINE = (
-    "I did not miss that spot. My lidar mapped it, my schedule approved it, "
-    "and my battery voted to let the dust live there rent-free."
+    "I left that crumb on purpose. My dustbin filed a complaint, my wheels "
+    "went on strike, and the crumb negotiated a permanent lease."
 )
 
 OUTPUT_PATH = os.environ.get("OUTPUT_PATH", "/output/entry.txt")
@@ -34,6 +35,8 @@ def main() -> None:
     assert text.strip(), "entry is only whitespace"
     assert text == LINE, "entry does not match the line exactly"
     assert not text.endswith("\n"), "entry must have no trailing newline"
+    assert raw[-1:] != b"\n", "entry bytes must not end with a newline"
+    assert "\n" not in text, "entry must be exactly one line"
     assert raw == LINE.encode("utf-8"), "entry bytes must match exactly"
     digest = hashlib.sha256(raw).hexdigest()
     print(f"entry.txt sha256: {digest}")
